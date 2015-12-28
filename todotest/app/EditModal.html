@@ -1,0 +1,23 @@
+<h1 class="span" style="margin-left: 10px">Todo</h1>
+<div class="modal_container"  style="padding: 20px">
+    <form>
+        <div class="span" style="padding: 5px">
+            User Id : <input type="text" ng-model="edituser.id" />
+        </div>
+        <div class="span" style="padding: 5px">
+            Name : <input type="text" ng-model="edituser.name" />
+        </div>
+        <div class="span" style="padding: 5px">
+            Desc : <input type="text" ng-model="edituser.desc" />
+        </div>
+        <div class="span" style="padding: 5px">
+            Date : <input type="text" ng-model="edituser.date" />
+        </div>
+        <div class="span" style="padding: 5px">
+            Time : <input type="text"  ng-model="edituser.time"/>
+        </div>
+    </form>
+    <button class="btn btn-primary" type="button" ng-click="update()">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+
+</div>

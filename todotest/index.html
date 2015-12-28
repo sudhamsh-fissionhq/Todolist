@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" type="text/css" href="app/styles.css">
+</head>
+<body ng-cloak="">
+<h1>Todo App</h1>
+<div  ng-controller="modalController" style="padding: 20px">
+    <div class="span1">
+        <button name="addTask" class="btn btn-primary" ng-click="open()">Add Task</button>
+    </div>
+    <br />
+    <div>
+            <table border = "0">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Edit & Delete</th>
+                </tr>
+                <tr ng-repeat = "todo in allList track by $index">
+                    <td >{{ todo.id }}</td>
+                    <td>{{ todo.name }}</td>
+                    <td>{{ todo.desc }}</td>
+                    <td>{{ todo.date }}</td>
+                    <td>{{ todo.time }}</td>
+                     <td>
+                         <button name="editBtn" class="btn" ng-click="edit(todo)">edit</button>
+                         <button  class="btn btn-danger"  ng-click="delete
+                         (todo.id )">delete</button>
+                     </td>
+
+                </tr>
+            </table>
+    </div>
+</div>
+</body>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="node_modules/bootbox/bootbox.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controller/todocontroller.js"></script>
+<script src="/app/controller/ModalCtrl.js"></script>
+
+</html>
