@@ -1,0 +1,21 @@
+<div class="createNew">
+
+    <div class="container"  style="padding: 20px">
+        <form name="addForm">
+            <div class="span" style="padding: 5px" >
+                <label>  Name : </label><input style="margin-left: 10px" required="true" type="text" ng-model="user.name"  />
+            </div>
+            <div class="span" style="padding: 5px">
+                <label>   Desc :</label> <input style="margin-left: 10px" required type="text" ng-model="user.desc" />
+            </div>
+            <div class="span" style="padding: 5px">
+                <label>   Date : </label><input style="margin-left: 17px" required type="text" ng-model="user.date" />
+            </div>
+            <div class="span" style="padding: 5px">
+                <label>  Time :</label> <input style="margin-left: 10px" required type="text"  ng-model="user.time"/>
+            </div>
+        </form>
+        <button class="btn btn-primary" type="button" ng-click="save(user)" ng-disabled="addForm.$invalid">Save</button>
+        <button class="btn"  type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

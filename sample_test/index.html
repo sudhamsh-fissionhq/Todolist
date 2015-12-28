@@ -1,0 +1,23 @@
+<!Doctype html>
+
+<html lang="en" ng-app="mainApp">
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app/styles.css">
+    <base href="/">
+</head>
+<body ng-cloak="">
+<h1>sample test</h1>
+<div ng-controller="todoController" style="padding: 10px">
+
+    <div ui-view></div>
+</div>
+</body>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controller/todoController.js"></script>
+<script src="app/services/todoData.js"></script>
+</html>

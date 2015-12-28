@@ -1,0 +1,29 @@
+<div class="span3">
+    <button class="btn btn-primary"  ng-click="go('/viewList')" >View List</button>
+    <button class="btn" style="background-color: #b2dba1" ng-click="go('/createNew')">Create Task</button>
+</div>
+<br>
+<div class="viewList">
+    <table border = "0">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Edit & Delete</th>
+        </tr>
+        <tr ng-repeat = "todo in todolist">
+            <td >{{ todo.id }}</td>
+            <td>{{ todo.name }}</td>
+            <td>{{ todo.desc }}</td>
+            <td>{{ todo.date }}</td>
+            <td>{{ todo.time }}</td>
+            <td>
+                <button name="editBtn" class="btn" ng-click="edit(todo)">edit</button>
+                <button  class="btn btn-danger"  ng-click="delete(todo.id )">delete</button>
+            </td>
+
+        </tr>
+    </table>
+</div>
